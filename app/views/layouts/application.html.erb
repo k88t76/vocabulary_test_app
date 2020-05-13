@@ -18,14 +18,17 @@
       </h1>
     </header>
     
+    <% flash.each do |message_type, message| %>
+  　　<div class="alert alert-<%= message_type %>"><%= message %></div>
+　　<% end %>
     <div>
-      <nav>left</nav>
+      <nav></nav>
       <main><%= yield %></main>
-      <aside>right</aside>
+      <aside></aside>
     </div>
     
     
     
-    <footer>footer</footer>
+    <footer></footer>
   </body>
 </html>

@@ -1,2 +1,14 @@
-<form action="/output" class="new_word" id="new_word" method="post">
-  
+
+<form accept-charset="UTF-8" action="/enter" class="new_word"
+      id="new_word" method="post">
+  <input name="authenticity_token" type="hidden"
+         value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+  <label for="word">単語</label>
+  <input id="word" name="word[word]" type="text" />
+
+  <label for="meaning">意味</label>
+  <input id="meaning" name="word[meaning]" type="text" />
+
+  <input class="btn btn-primary" name="commit" type="submit"
+         value="Enter" />
+</form>
