@@ -10,6 +10,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1 id="logo">
+        <a href="/">
+          <img src="#" alt="VocabularyTestApp">
+        </a>
+      </h1>
+    </header>
+    
+    <div>
+      <nav>left</nav>
+      <main><%= yield %></main>
+      <aside>right</aside>
+    </div>
+    
+    
+    
+    <footer>footer</footer>
   </body>
 </html>
