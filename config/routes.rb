@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/output', to: 'pages#output'
   get '/new', to: 'pages#new'
   post '/enter', to: 'pages#enter'
+  get '/pdfs/show', to: 'pdfs#show'
 end

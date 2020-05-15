@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @word = Word.new
+    @words = Word.all
   end
 
   def output
@@ -13,11 +13,17 @@ class PagesController < ApplicationController
   def enter
     @word = Word.new(word_params)
     if @word.save
-      flash[:success] = "単語の登録に成功しました！"
+      flash[:success] = "単語の登録に成功しました"
       redirect_to("/home")
     else
       render 'home'
     end
+  end
+  
+  def destroy
+    Word.find_by(params[:id]).destroy
+    flash[:success] = "単語を削除しました"
+    redirect_to("/home")
   end
   
   private
