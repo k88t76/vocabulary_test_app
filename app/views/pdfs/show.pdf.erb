@@ -1,0 +1,23 @@
+
+<div class="container">
+<ul>
+  
+  <% @words.each do |word| %>
+  
+    <li>
+      
+    <div class="word">
+      <%= word.word %>
+    </div>
+    
+    <div class="meaning">
+      <%= word.meaning %>
+    </div>
+    
+    
+    
+    </li>
+    
+  <% end %>
+</ul>
+</div>
