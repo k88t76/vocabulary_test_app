@@ -2,32 +2,43 @@
 <html lang="jp" dir="ltr">
  
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>test</title>
-    <style>
-        body {
+<style>
+@font-face {
+  font-family: "IPA明朝";
+  src: url('/home/ubuntu/environment/vocabulary_test_app/app/assets/fonts/ipaexm.ttf') format('truetype');
+}
+
+body {
             width: 90%;
             text-align: center;
-        }
+            font-family:"IPA明朝";
+            font-size: 20px;
+}
  
-        ul {
+ul {
   list-style: none;
+}
+.title{
+    text-align: center;
 }
 .container{
     display: block;
-    margin-left: 170px;
-    margin-right: 170px;
+    margin: 0 170px;
 }
 
-  .word{
+.content-wrapper{
+    margin:20px 0;
+}
+.word{
     float: left;
-  }
+}
   
-  .meaning{
+.meaning{
     float: right;
-      
-  }
-    </style>
+}
+</style>
 </head>
  
 <body>
