@@ -12,3 +12,40 @@
   <input class="btn btn-primary" name="commit" type="submit"
          value="Enter" />
 </form>
+
+<ul>
+  
+  <% @words.each do |word| %>
+  
+    <li>
+      
+   <div class="btn-around">
+    <%= word.word %>
+    
+    
+    
+      <%= word.meaning %>
+    </div>
+    
+    <div class="destroy-btn">
+    <%= button_to("削除","/destroy") %>
+    </div>
+    
+    </li>
+    
+  <% end %>
+</ul>
+    
+    <ul style="list-style: none">
+      
+      <li>
+      <div class="btn-around">英→日：</div><%= button_to("PDF出力","/pdfs/show_EtoJ.pdf", method: :get) %>
+      </li>
+      
+      <li>
+        <div class="btn-around">日→英：</div><%= button_to("PDF出力","/pdfs/show_JtoE.pdf", method: :get) %>
+      </li>
+      
+      
+      
+    </ul>
