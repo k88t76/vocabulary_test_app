@@ -16,7 +16,6 @@
 <ul>
   
   <% @words.each do |word| %>
-  
     <li>
       
    <div class="btn-around">
@@ -28,7 +27,8 @@
     </div>
     
     <div class="destroy-btn">
-    <%= button_to("削除","/destroy") %>
+    <%= link_to "削除", "/destroy/#{word.id}", method: :delete, 
+                  data: { confirm: "削除しますか？" } %>
     </div>
     
     </li>

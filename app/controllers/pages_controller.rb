@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @words = Word.all
+    
   end
 
   def output
@@ -21,8 +22,10 @@ class PagesController < ApplicationController
   end
   
   def destroy
-    Word.find_by(params[:id]).destroy
+    @word = Word.find(params[:id])
+  if  @word.delete
     flash[:success] = "単語を削除しました"
+  end
     redirect_to("/home")
   end
   
