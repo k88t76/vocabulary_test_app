@@ -28,9 +28,13 @@ aside {
 footer {
   height: 200px;
 }
-.btn-around{
+.delete-btn-around{
     float: left;
     width: 400px;
+}
+.btn-around{
+  float: left;
+  width: 70px;
 }
 
 @media screen and (max-width: 900px){

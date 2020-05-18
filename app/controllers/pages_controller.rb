@@ -13,11 +13,15 @@ class PagesController < ApplicationController
   
   def enter
     @word = Word.new(word_params)
-    if @word.save
-      flash[:success] = "単語の登録に成功しました"
-      redirect_to("/home")
-    else
-      render 'home'
+    if @word
+      if @word.save
+        flash[:success] = "単語の登録に成功しました"
+        redirect_to("/home")
+      else
+        flash[:danger] = "単語の登録に失敗しました"
+        @words = Word.all
+        render 'home'
+      end
     end
   end
   

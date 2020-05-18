@@ -18,7 +18,7 @@
   <% @words.each do |word| %>
     <li>
       
-   <div class="btn-around">
+   <div class="delete-btn-around">
     <%= word.word %>
     
     
@@ -27,7 +27,7 @@
     </div>
     
     <div class="destroy-btn">
-    <%= link_to "削除", "/destroy/#{word.id}", method: :delete, 
+    <%= button_to "削除", "/destroy/#{word.id}", method: :delete, 
                   data: { confirm: "削除しますか？" } %>
     </div>
     

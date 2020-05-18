@@ -18,12 +18,15 @@
       </h1>
     </header>
     
-    <% flash.each do |message_type, message| %>
-  　　<div class="alert alert-<%= message_type %>"><%= message %></div>
-　　<% end %>
+   
     <div>
       <nav></nav>
-      <main><%= yield %></main>
+      <main>
+         <% flash.each do |message_type, message| %>
+  　　<div class="alert alert-<%= message_type %>"><%= message %></div>
+  　　     <% end %>
+        <%= yield %>
+      </main>
       <aside></aside>
     </div>
     
