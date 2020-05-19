@@ -28,6 +28,9 @@ aside {
 footer {
   height: 200px;
 }
+.new_word{
+  margin-left: 40px;
+}
 .delete-btn-around{
     float: left;
     width: 400px;
@@ -35,6 +38,32 @@ footer {
 .btn-around{
   float: left;
   width: 70px;
+}
+.word-index{
+  margin-left:40px;
+}
+.output-exam{
+  margin-left: 40px;
+}
+.words-list,.output-btn{
+  margin-left: 20px;
+}
+.number{
+  width:40px; 
+  
+}
+.word{
+  width:180px;
+}
+.note1{
+  margin-left: 40px;
+}
+.note2{
+  margin-left: 55px;
+}
+ul {
+  
+  list-style: none;
 }
 
 @media screen and (max-width: 900px){

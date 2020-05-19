@@ -13,17 +13,24 @@
          value="Enter" />
 </form>
 
-<ul>
+
+    <p class="word-index">＜登録した単語一覧＞</p>
+    
+    <% i=1 %>
+  <ul class="words-list">
   
   <% @words.each do |word| %>
     <li>
       
    <div class="delete-btn-around">
-    <%= word.word %>
+    
+    <div class="number"><%= "(#{i})" %></div>
+    <div class="word"><%= word.word %></div>
     
     
     
-      <%= word.meaning %>
+      <div class="meaning"><%= word.meaning %></div>
+      
     </div>
     
     <div class="destroy-btn">
@@ -33,11 +40,12 @@
     
     </li>
     
-  <% end %>
-</ul>
+    <% i += 1 %>
     
-    <ul style="list-style: none">
-      
+  <% end %>
+  </ul>
+<p class="output-exam">【テスト問題の出力はこちらから】</p>
+    <ul class ="output-btn">
       <li>
       <div class="btn-around">英→日：</div><%= button_to("PDF出力","/pdfs/show_EtoJ.pdf", method: :get) %>
       </li>
@@ -45,7 +53,7 @@
       <li>
         <div class="btn-around">日→英：</div><%= button_to("PDF出力","/pdfs/show_JtoE.pdf", method: :get) %>
       </li>
-      
-      
-      
-    </ul>
+  </ul>
+  
+  <div class="note1">※推奨用紙サイズ：A４</div>
+  <div class="note2">用紙一枚に１５単語まで出力可能です</div>
