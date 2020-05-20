@@ -33,7 +33,6 @@ footer {
 }
 .delete-btn-around{
     float: left;
-    width: 400px;
 }
 .btn-around{
   float: left;
@@ -52,8 +51,11 @@ footer {
   width:40px; 
   
 }
-.word{
-  width:180px;
+.word,.meaning{
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .note1{
   margin-left: 40px;
@@ -76,18 +78,19 @@ ul {
   main {
     order: -1;
   }
-  .new_word{
-width: 50px;
-}
+ .new_word{
+ width: 50px;
+ }
 .destroy-btn{
   display: inline-block;
   max-width: 900px;
   width: 100%;
   margin-bottom: 20px
-}
+ }
 
-ul {
+ ul {
   
   list-style: none;
-}
+ }
+
 }
