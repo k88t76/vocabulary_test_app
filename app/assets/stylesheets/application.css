@@ -76,4 +76,18 @@ ul {
   main {
     order: -1;
   }
+  .new_word{
+width: 50px;
+}
+.destroy-btn{
+  display: inline-block;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 20px
+}
+
+ul {
+  
+  list-style: none;
+}
 }
