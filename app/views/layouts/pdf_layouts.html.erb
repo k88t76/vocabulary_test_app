@@ -49,11 +49,44 @@ ul {
     float: right;
 }
 </style>
+
 </head>
  
 <body>
     <div>
-        <%= yield %>
+        <h2 class="title">単語テスト</h2>
+<p class ="problem-state">次の<%= yield 'pro' %>を<%= yield 'ans'%>に直しましょう</p>
+
+<div class="container">
+    <ul>
+  <% i=1 %>
+  <% @words.each do |word| %>
+  <div class="content-wrapper">
+    <li>
+      
+    <div class="number">
+      <%= "(#{i})" %>
+    </div>
+      
+   <div class="problem"> 
+   <% if @c == 0 %>
+      <%= word.word %>
+   <% else %>
+     <%= word.meaning %>
+     <% end %>
+    </div>
+    
+    <div class="answer">
+      __________________
+    </div>
+    <br>
+    
+    </li>
+    </div>
+    <% i+=1 %>
+  <% end %>
+</ul>
+</div>
     </div>
 </body>
  

@@ -1,28 +1,28 @@
 class PdfsController < ApplicationController
+  
+
+  
+  
   def show_EtoJ
   @words = Word.all
-  
-  
+  @c = 0
    respond_to do |format|
-   format.html
    format.pdf do
-  render pdf: 'show1.pdf', #pdfファイルの名前。これがないとエラーが出ます
-               layout: 'pdf_layouts.html', #レイアウトファイルの指定。views/layoutsが読まれます。
-               template: 'pdfs/show_EtoJ' #テンプレートファイルの指定。viewsフォルダが読み込まれます。  
+  render pdf: 'show1', 
+               layout: 'pdf_layouts.html',
+               template: 'pdfs/show_EtoJ'
    end
    end
   end
   
     def show_JtoE
   @words = Word.all
-  
-  
+  @c = 1
     respond_to do |format|
-    format.html
     format.pdf do
-    render pdf: 'show2.pdf', #pdfファイルの名前。これがないとエラーが出ます
-               layout: 'pdf_layouts.html', #レイアウトファイルの指定。views/layoutsが読まれます。
-               template: 'pdfs/show_JtoE' #テンプレートファイルの指定。viewsフォルダが読み込まれます。  
+    render pdf: 'show2', 
+               layout: 'pdf_layouts.html', 
+               template: 'pdfs/show_JtoE' 
     end
     end
     end

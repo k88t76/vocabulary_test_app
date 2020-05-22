@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   delete "/destroy/:id", to: 'pages#destroy'
   get '/pdfs/show_EtoJ', to: 'pdfs#show_EtoJ'
   get '/pdfs/show_JtoE', to: 'pdfs#show_JtoE'
-  
+
 end
