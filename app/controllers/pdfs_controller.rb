@@ -26,5 +26,7 @@ class PdfsController < ApplicationController
     end
     end
     end
+    
+    
   
 end

@@ -28,6 +28,10 @@ aside {
 footer {
   height: 200px;
 }
+.flash{
+  font-size: 18px;
+  margin-left:40px;
+}
 .new_word{
   margin-left: 40px;
 }

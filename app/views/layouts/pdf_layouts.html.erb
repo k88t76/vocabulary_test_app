@@ -32,7 +32,7 @@ ul {
     margin-right:  70px;
 }
 
-.content-wrapper{
+.content-list{
     margin-top:59px;
 }
 .number{
@@ -48,6 +48,8 @@ ul {
 .answer{
     float: right;
 }
+
+
 </style>
 
 </head>
@@ -61,8 +63,8 @@ ul {
     <ul>
   <% i=1 %>
   <% @words.each do |word| %>
-  <div class="content-wrapper">
-    <li>
+  
+    <li class="content-list" style="<%= layout(@words.length) %>" > 
       
     <div class="number">
       <%= "(#{i})" %>
@@ -82,7 +84,7 @@ ul {
     <br>
     
     </li>
-    </div>
+    
     <% i+=1 %>
   <% end %>
 </ul>
