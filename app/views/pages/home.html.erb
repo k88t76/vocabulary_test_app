@@ -46,6 +46,12 @@
     <% i += 1 %>
     
   <% end %>
+  
+  <li class="all-delete">
+    <div class="all-delete-around">登録した単語を全て消去：</div><%= button_to"All Delete","/all_delete" ,
+                                                                                data: { confirm: "全ての単語を削除しますか？"} %>
+  </li>
+  
   </ul>
 <p class="output-exam">【テスト問題の出力はこちらから】</p>
     <ul class ="output-btn">

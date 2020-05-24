@@ -45,6 +45,13 @@ footer {
 .word-index{
   margin-left:40px;
 }
+.all-delete{
+  margin-top:20px;
+}
+.all-delete-around{
+  float:left;
+  width:200px;
+}
 .output-exam{
   margin-left: 40px;
 }

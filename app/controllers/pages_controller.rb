@@ -33,6 +33,13 @@ class PagesController < ApplicationController
     redirect_to("/home")
   end
   
+  def all_delete
+    if Word.destroy_all
+      flash[:success] = "単語を全て削除しました"
+      redirect_to('/home')
+    end
+  end
+  
   private
 
     def word_params
