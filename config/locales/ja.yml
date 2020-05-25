@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      word: 単語
+    attributes:
+      word:
+        word: 単語
+        meaning: 意味

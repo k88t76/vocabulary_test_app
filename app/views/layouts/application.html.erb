@@ -23,8 +23,19 @@
       <nav></nav>
       <main>
          <% flash.each do |message_type, message| %>
-  <div class="flash"><div class="alert alert-<%= message_type %>"><%= message %></div></div>
+         <ul>
+  <div class="flash"><div class="alert alert-<%= message_type %>">
+    <li><%= message %> </li>
+    </div>
+    </div>
   　　     <% end %>
+  　　       <% if @word.errors %>
+        
+        <% @word.errors.full_messages.each do |message| %>
+          <li class="error"><%= message %></li>
+        <% end %>
+        </ul>
+      <% end %>
         <%= yield %>
       </main>
       <aside></aside>
