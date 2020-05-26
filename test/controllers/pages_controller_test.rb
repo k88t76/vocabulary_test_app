@@ -1,14 +1,17 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get home" do
-    get pages_home_url
+  test "should get root" do
+    get root_url
     assert_response :success
+  end
+  
+  test "should get home" do
+    get home_url
+    assert_response :success
+    assert_select "title", "VocabularyTestApp"
   end
 
-  test "should get output" do
-    get pages_output_url
-    assert_response :success
-  end
+
 
 end

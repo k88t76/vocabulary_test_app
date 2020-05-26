@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/home', to: 'pages#home'
   get '/output', to: 'pages#output'
-  get '/pages/new', to: 'pages#new'
   post '/enter', to: 'pages#enter'
   get '/enter', to: 'pages#home' #Error countermeasure
   delete "/destroy/:id", to: 'pages#destroy'

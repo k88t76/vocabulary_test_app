@@ -4,21 +4,16 @@
     <title>VocabularyTestApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
-      <h1 id="logo">
-        <a href="/">
-          <img src="#" alt="VocabularyTestApp">
-        </a>
-      </h1>
+      <ul class="title">
+      <li><h5>塾講師大学生を救いたい</h5></li>
+      <li><h1>作れる単語テスト【つくたん】</h1></li>
+      </ul>
     </header>
-    
-   
     <div>
       <nav></nav>
       <main>
@@ -26,11 +21,9 @@
          <ul>
   <div class="flash"><div class="alert alert-<%= message_type %>">
     <li><%= message %> </li>
-    </div>
-    </div>
+    </div></div>
   　　     <% end %>
-  　　       <% if @word.errors %>
-        
+  　　   <% if @word.errors %>
         <% @word.errors.full_messages.each do |message| %>
           <li class="error"><%= message %></li>
         <% end %>
@@ -40,9 +33,6 @@
       </main>
       <aside></aside>
     </div>
-    
-    
-    
     <footer></footer>
   </body>
 </html>

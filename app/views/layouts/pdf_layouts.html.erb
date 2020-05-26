@@ -1,75 +1,58 @@
 <!DOCTYPE html>
 <html lang="jp" dir="ltr">
- 
 <head>
     <meta charset="UTF-8">
-    <title>test</title>
+    <title>vocabulary_test</title>
 <style>
 @font-face {
   font-family: "IPA明朝";
   src: url("/home/ubuntu/environment/vocabulary_test_app/app/assets/fonts/ipaexm.ttf") format('truetype');
 }
-
 body {
-        
-            text-align: center;
-            font-family:"IPA明朝";
-            font-size: 20px;
+    text-align: center;
+    font-family:"IPA明朝";
+    font-size: 20px;
 }
- 
 ul {
-  list-style: none;
+    list-style: none;
 }
 .title{
     text-align: center;
-}
-.problem-state{
-    
 }
 .container{
     display: block;
     margin-left:  100px;
     margin-right:  70px;
 }
-
-.content-list{
+.list{
     margin-top:59px;
 }
 .number{
     float: left;
     width: 60px;
-    
 }
 .problem{
     float: left;
-    
 }
-  
 .answer{
     float: right;
 }
-
-
 </style>
 
 </head>
  
 <body>
-    <div>
-        <h2 class="title">単語テスト</h2>
+<h2 class="title">単語テスト</h2>
 <p class ="problem-state">次の<%= yield 'pro' %>を<%= yield 'ans'%>に直しましょう</p>
 
 <div class="container">
     <ul>
   <% i=1 %>
   <% @words.each do |word| %>
-  
-    <li class="content-list" style="<%= layout(@words.length) %>" > 
-      
+    <li class="list" style="<%= layout(@words.length) %>" > 
     <div class="number">
       <%= "(#{i})" %>
     </div>
-      
    <div class="problem"> 
    <% if @c == 0 %>
       <%= word.word %>
@@ -77,19 +60,15 @@ ul {
      <%= word.meaning %>
      <% end %>
     </div>
-    
     <div class="answer">
       __________________
     </div>
     <br>
-    
     </li>
-    
     <% i+=1 %>
   <% end %>
 </ul>
 </div>
-    </div>
 </body>
  
 </html>
