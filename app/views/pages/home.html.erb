@@ -1,58 +1,40 @@
 
-<form accept-charset="UTF-8" action="/enter" class="new_word"
+<form accept-charset="UTF-8" action="/new" class="new_word"
       id="new_word" method="post">
   <input name="authenticity_token" type="hidden"
          value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" >
   <label for="word">単語</label>
   <input id="word" name="word[word]" type="text" >
-
   <label for="meaning">意味</label>
   <input id="meaning" name="word[meaning]" type="text" >
-
-  <input class="btn btn-primary" name="commit" type="submit"
-         value="Enter">
+  <input class="btn btn-primary" name="commit" type="submit" value="Enter">
 </form>
 
-
-    <p class="word-index">
-      
-      ＜登録した単語一覧＞
-      </p>
-    
+    <p class="word-index">＜登録した単語一覧＞</p>
     <% i=1 %>
-  <ul class="words-list">
-  
+ <ul class="words-list">
   <% @words.each do |word| %>
     <li>
-      
    <div class="delete-btn-around">
-    
     <div class="number"><%= "(#{i})" %></div>
     <div class="word"><%= word.word %></div>
+    <div class="meaning"><%= word.meaning %></div>
+   </div>
     
+    <div class="btn2">
+      <%= button_to '編集', "/edit/#{word.id}", method: :get %>
     
-    
-      <div class="meaning"><%= word.meaning %></div>
-      
+    <%= button_to '削除', "/destroy/#{word.id}", method: :delete, data: { confirm: "削除しますか？" } %>
     </div>
-    
-    <div class="destroy-btn">
-    <%= button_to "削除", "/destroy/#{word.id}", method: :delete, 
-                  data: { confirm: "削除しますか？" } %>
-    </div>
-    
     </li>
-    
     <% i += 1 %>
-    
-  <% end %>
+    <% end %>
   
   <li class="all-delete">
     <div class="all-delete-around">登録した単語を全て消去：</div><%= button_to"All Delete","/all_delete" ,
-                                                                                data: { confirm: "全ての単語を削除しますか？"} %>
+    data: { confirm: "全ての単語を削除しますか？"} %>
   </li>
-  
-  </ul>
+ </ul>
 <p class="output-exam">【テスト問題の出力はこちらから】</p>
     <ul class ="output-btn">
       <li>

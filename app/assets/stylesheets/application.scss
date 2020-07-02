@@ -9,11 +9,6 @@ header {
   height: 150px;
 	background-color: lightgreen;
 }
-header #logo img {
-	width: 150px;		
-	margin-top: 15px;
-	left: 3%;
-}
 div {
   display: flex;
 }
@@ -48,15 +43,18 @@ footer {
   float: left;
   width: 70px;
 }
+.btn2{
+width: 40px;
+}
 .word-index{
-  margin-left:40px;
+  margin-left: 40px;
 }
 .all-delete{
-  margin-top:20px;
+  margin-top: 20px;
 }
 .all-delete-around{
-  float:left;
-  width:200px;
+  float: left;
+  width: 200px;
 }
 .output-exam{
   margin-left: 40px;
@@ -66,7 +64,6 @@ footer {
 }
 .number{
   width:40px; 
-  
 }
 .word,.meaning{
   width: 250px;
@@ -85,6 +82,8 @@ ul {
   list-style: none;
 }
 
+
+
 @media screen and (max-width: 900px){
   body, nav, aside {
     width: 100%;
@@ -98,7 +97,7 @@ ul {
  .new_word{
  width: 50px;
  }
-.destroy-btn{
+.btn2{
   display: inline-block;
   max-width: 900px;
   width: 100%;
