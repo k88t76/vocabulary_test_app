@@ -3,8 +3,8 @@
 英単語と意味を入力すると入力した単語の数に応じた適切なレイアウトでPDF出力できるようになっています。
 
 【使用した技術】
-言語：　Ruby
-フレームワーク：　Rails
-PDF出力： wicked_pdf
+- 言語：　Ruby
+- フレームワーク：　Rails
+- PDF出力： wicked_pdf
 
 アプリのURL: https://floating-cliffs-94911.herokuapp.com/
