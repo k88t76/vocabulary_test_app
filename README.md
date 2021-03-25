@@ -8,4 +8,4 @@
 - PDF出力： wicked_pdf
 
 https://floating-cliffs-94911.herokuapp.com/
-⇦このURLからアプリを利用できますが、ページ表示まで時間がかかります。
+⇦このURLからアプリを確認できますが、ページ表示まで時間がかかります。
