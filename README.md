@@ -7,4 +7,5 @@
 - フレームワーク：　Rails
 - PDF出力： wicked_pdf
 
-https://floating-cliffs-94911.herokuapp.com/　　　⇦このURLからアプリを利用できますが、ページ表示まで時間がかかります。
+https://floating-cliffs-94911.herokuapp.com/
+⇦このURLからアプリを利用できますが、ページ表示まで時間がかかります。
