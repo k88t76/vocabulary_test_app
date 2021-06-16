@@ -6,8 +6,3 @@
 - 言語：　Ruby
 - フレームワーク：　Rails
 - PDF出力： wicked_pdf
-
-https://floating-cliffs-94911.herokuapp.com/
-⇦このURLからアプリを確認できます
-
-(herokuの無料枠にデプロイしているのでページ表示まで時間がかかります)
